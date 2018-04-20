@@ -44,12 +44,6 @@ the following directory and project structure is genarated. For simplycity, the 
 	+---user-driver
 	|
 
-Please, note that the `user-driver` is a project of type `pom` because it may host more than one type of driver. As an example, the `user-core` may be exposed as as a web service as well as command line batch.
-
-Note that the gateway api may also have more than one implementation. As an example, the user gateway may have an _in memory_ repository implementation for testing purpose and another JPA implementation for production.
-
-The same principle applies to the _driver_ project since the default implementation may be a rest service and another SOAP implementation may be required for another point of exposure of the service.
-
 ***
 
 ### Overview 
@@ -66,15 +60,15 @@ This module implements the entities and use cases defined into the API module.
 
 This module contains the interfaces exposing the functionalities to access the entities by the mean of repositories.
 
-##### Gateway Core
+##### Gateway Implementations
 
-This module implements the entities and use cases defined into the Gateway API module.
+This project may contains one or more _gateway-api_ implementations. As an example, the user gateway may have an _in memory_ repository implementation for testing purpose and another JPA implementation for production.
 
 ##### Driver
 
-The driver is mainly how the service functionnality will be exposed to the rest of the world.
+A driver module is mainly how the service functionnality will be exposed to the rest of the world.
 
-It may be a any kind of service, a web application, a batch implementation and so on.
+The _driver_ is a project of type `pom` because it may host more than one type of driver. As an example, the _core_ business logic may be exposed as as a web service as well as command line batch.
 
 ***
 
