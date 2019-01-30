@@ -17,7 +17,7 @@ When using this archetype with these parameters:
 
 the following directory and project structure is genarated. For simplycity, the generated packages have been removed:
 
-	+---user-api
+	+---api
 	|   \---src
 	|       +---main
 	|       |   +---java
@@ -25,7 +25,7 @@ the following directory and project structure is genarated. For simplycity, the 
 	|       \---test
 	|           +---java
 	|           \---resources
-	+---user-core
+	+---core
 	|   \---src
 	|       +---main
 	|       |   +---java
@@ -33,16 +33,24 @@ the following directory and project structure is genarated. For simplycity, the 
 	|       \---test
 	|           +---java
 	|           \---resources
-	\---user-gateway
-	|   \---user-gateway-api
+	\---gateway
+	|   \---gateway-api
 	|       \---src
 	|           +---main
 	|           |   +---java
 	|           |   \---resources
 	|           \---test
 	|               \---resources
-	+---user-driver
+	+---driver
 	|
+
+This hierarchy is expressed like this from a maven artifact point of view :
+
+	+---user-api
+	+---user-core
+	\---user-gateway
+	|   \---user-gateway-api
+	+---user-driver
 
 ***
 
@@ -62,7 +70,7 @@ This module contains the interfaces exposing the functionalities to access the e
 
 ##### Gateway Implementations
 
-This project may contains one or more _gateway-api_ implementations. As an example, the user gateway may have an _in memory_ repository implementation for testing purpose and another JPA implementation for production.
+This project may contains one or more _gateway-api_ implementations. As an example, the user gateway may have an _in memory_ repository implementation for testing purpose and another _JPA_ repository implementation for the production environment.
 
 ##### Driver
 

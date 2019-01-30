@@ -13,7 +13,7 @@
 		</fileSet>
 	</fileSets>
 	<modules>
-		<module id="${rootArtifactId}-api" dir="__rootArtifactId__-api" name="${rootArtifactId}-api">
+		<module id="${rootArtifactId}-api" dir="api" name="${rootArtifactId}-api">
 			<fileSets>
 				<fileSet filtered="true" packaged="true" encoding="UTF-8">
 					<directory>src/main/java</directory>
@@ -35,9 +35,9 @@
 				</fileSet>
 			</fileSets>
 		</module>
-		<module id="${rootArtifactId}-gateway" dir="__rootArtifactId__-gateway" name="${rootArtifactId}-gateway">
+		<module id="${rootArtifactId}-gateway" dir="gateway" name="${rootArtifactId}-gateway">
 			<modules>
-				<module id="${rootArtifactId}-gateway-api" dir="__rootArtifactId__-gateway-api" name="${rootArtifactId}-gateway-api">
+				<module id="${rootArtifactId}-gateway-api" dir="gateway-api" name="${rootArtifactId}-gateway-api">
 					<fileSets>
 						<fileSet filtered="true" packaged="true" encoding="UTF-8">
 							<directory>src/main/java</directory>
@@ -61,7 +61,7 @@
 				</module>
 			</modules>
 		</module>
-		<module id="${rootArtifactId}-core" dir="__rootArtifactId__-core" name="${rootArtifactId}-core">
+		<module id="${rootArtifactId}-core" dir="core" name="${rootArtifactId}-core">
 			<fileSets>
 				<fileSet filtered="true" packaged="true" encoding="UTF-8">
 					<directory>src/main/java</directory>
@@ -83,7 +83,7 @@
 				</fileSet>
 			</fileSets>
 		</module>
-		<module id="${rootArtifactId}-driver" dir="__rootArtifactId__-driver" name="${rootArtifactId}-driver">
+		<module id="${rootArtifactId}-driver" dir="driver" name="${rootArtifactId}-driver">
 		</module>
 	</modules>
 </archetype-descriptor>
